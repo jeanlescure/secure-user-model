@@ -13,8 +13,8 @@ I do intend to make a gem out of this project eventually. If you have any use fo
   
 ## Usage
 
-  1. start the server: rails s -p 8080
-  2. navigate to the server url: http://localhost:8080
+  1. start the server: `rails s -p 8080`
+  2. navigate to the server url: `http://localhost:8080`
   
 ## TODOs
 
