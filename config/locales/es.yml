@@ -1,0 +1,38 @@
+es:
+  new_user: "nuevo usuario"
+  new_user_info: "datos de nuevo usuario"
+  
+  user: "usuario"
+  user_name: "nombre de usuario"
+  password: "contraseña"
+  password_confirm: "confirmar contraseña"
+  name: "nombre completo"
+  firstname: "nombre"
+  middlename: "segundo nombre"
+  surname: "apellido"
+  lastname: "segundo apellido"
+  dob: "fecha de nacimiento"
+  choose_locale: "idioma preferido"
+  register_submit: "registrarme"
+  user_reg_error: "error registrando usuario!"
+  user_exists_error: "el nombre de usuario que ha elegido ya está registrado."
+  required_field: "campo obligatorio"
+  user_info_reg_error: "por favor verifique los campos obligatorios."
+  user_pass_error: "las contraseñas deben coincidir!"
+  user_login_error: "hubo un error de verificación. por favor revise el nombre de usuario y la contraseña."
+  too_many_tries: "ha excedido el número de intentos permitidos."
+  user_destroyed_error: "este usuario ha sido desactivado. si cree que esto es un error, contacte a su administrador."
+  edit_user_profile: "editar perfil de usuario"
+  
+  login: "ingresar"
+  login_submit: "ingresar"
+  
+  logout: "salir"
+  
+  user_as_db_title: "usuario encriptado (como aparece en la base de datos)"
+  dcrypt_user_title: "información de usuario descriptada"
+  formatted_user_title: "información de usuario con formato"
+  user_options_title: "opciones de usuario"
+  user_self_destroy: "deshabilitar este usuario"
+  
+  no_value: "sin dato"

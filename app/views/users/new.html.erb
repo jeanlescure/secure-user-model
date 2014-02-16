@@ -1,0 +1,46 @@
+<section>
+  <%= form_tag '', :method => 'post', :id=>'register' do %>
+    <fieldset>
+      <legend><%= t('new_user_info').titleize %></legend>
+      <div class="row">(*) <%= t('required_field') %></div>
+      <div class="row">
+        <%= label_tag :firstname, "#{t('firstname')}: ".titleize %>*
+        <%= text_field_tag :firstname, params[:firstname] || "", :autocomplete => "off" %>
+      </div>
+      <div class="row">
+        <%= label_tag :middlename, "#{t('middlename')}: ".titleize %>
+        <%= text_field_tag :middlename, params[:middlename] || "", :autocomplete => "off" %>
+      </div>
+      <div class="row">
+        <%= label_tag :surname, "#{t('surname')}: ".titleize %>*
+        <%= text_field_tag :surname, params[:surname] || "", :autocomplete => "off" %>
+      </div>
+      <div class="row">
+        <%= label_tag :lastname, "#{t('lastname')}: ".titleize %>
+        <%= text_field_tag :lastname, params[:lastname] || "", :autocomplete => "off" %>
+      </div>
+      <div class="row">
+        <%= label_tag :dob, "#{t('dob')}: ".titleize %>*
+        <%= date_field_tag :dob, params[:dob] || "" %>
+      </div>
+      <hr/>
+      <div class="row">
+        <%= label_tag :login, "#{t('user_name')}: ".titleize %>*
+        <%= text_field_tag :login, params[:login] || "", :autocomplete => "off" %>
+      </div>
+      <div class="row">
+        <%= label_tag :password, "#{t('password')}: ".titleize %>*
+        <%= password_field_tag :password, params[:password] || "", :autocomplete => "off" %>
+      </div>
+      <div class="row">
+        <%= label_tag :password_confirm, "#{t('password_confirm')}: ".titleize %>*
+        <%= password_field_tag :password_confirm, params[:password_confirm] || "", :autocomplete => "off" %>
+      </div>
+      <div class="row">
+        <%= label_tag :locale, "#{t('choose_locale').titleize}: " %>
+        <%= select_tag(:locale, options_for_select([['English','en'],['Español','es']],'en')) %>
+        <%= submit_tag t('register_submit').capitalize %>
+      </div>
+    </fieldset>
+  <% end %>
+</section>

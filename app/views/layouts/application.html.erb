@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SecureUserModel</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="gWrapper">
+  <nav>
+    <% if !session[:access].nil? %>
+      <span>User: <%= cookies['uname'] %></span> | <%= link_to t("logout").titleize, "/logout" %>
+    <% else %>
+      <%= link_to t("new_user").titleize, "/register" %> | <%= link_to t("login").titleize, "/login" %>
+    <% end %>
+  </nav>
+  <% if !flash[:alert].nil? %>
+    <section>
+      <b class="error"><%= flash[:alert].capitalize.gsub(/(\S\.\s*)(.)/){"#{$1}#{$2.capitalize}"} %></b>
+    </section>
+  <% end %>
+  
+  <%= yield %>
+
+</div>
+
+</body>
+</html>

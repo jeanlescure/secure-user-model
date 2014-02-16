@@ -1,0 +1,38 @@
+en:
+  new_user: "new user"
+  new_user_info: "new user info"
+  
+  user: "user"
+  user_name: "user name"
+  password: "password"
+  password_confirm: "confirm password"
+  name: "full name"
+  firstname: "name"
+  middlename: "middle name"
+  surname: "surname"
+  lastname: "last name"
+  dob: "date of birth"
+  choose_locale: "language"
+  register_submit: "register"
+  user_reg_error: "error registering user!"
+  user_exists_error: "the user name you have selected has already been taken."
+  required_field: "required field"
+  user_info_reg_error: "please check all required fields are filled."
+  user_pass_error: "the passwords must match!"
+  user_login_error: "Verification error. Please check your username and password."
+  too_many_tries: "you have exceeded the number of tries allowed."
+  user_destroyed_error: "this user has been deactivated. if you believe this is a mistake, contact your administrator."
+  edit_user_profile: "edit user profile"
+  
+  login: "login"
+  login_submit: "login"
+  
+  logout: "logout"
+  
+  user_as_db_title: "encrypted user (as stored on db)"
+  dcrypt_user_title: "decrypted user info"
+  formatted_user_title: "formatted user info"
+  user_options_title: "user options"
+  user_self_destroy: "disable this user"
+  
+  no_value: "not set"

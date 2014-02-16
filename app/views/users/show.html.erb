@@ -1,0 +1,36 @@
+<section class="table-like">
+  <div class="col">
+    <div class="content">
+      <h2><%= t('user_as_db_title').titleize %></h2>
+      <%= @user_enc.html_safe %>
+    </div>
+  </div><!--
+  --><div class="col">
+    <div class="content left_line">
+      <h2><%= t('dcrypt_user_title').titleize %></h2>
+      <%= @user_hash.html_safe %>
+    </div>
+  </div>
+</section>
+<section class="table-like">
+  <div class="col">
+    <div class="content">
+      <h2><%= t('formatted_user_title').titleize %></h2>
+      <p><b><%= t('user_name').titleize %>:</b> <%= (@user[:user]=="") ? "<i>#{t('no_value').titleize}</i>".html_safe : @user[:user] %></p>
+      <p><b><%= t('password').titleize %>:</b> *****</p>
+      <p><b><%= t('firstname').titleize %>:</b> <%= (@user[:firstname]=="") ? "<i>#{t('no_value').titleize}</i>".html_safe : @user[:firstname] %></p>
+      <p><b><%= t('middlename').titleize %>:</b> <%= (@user[:middlename]=="") ? "<i>#{t('no_value').titleize}</i>".html_safe : @user[:middlename] %></p>
+      <p><b><%= t('surname').titleize %>:</b> <%= (@user[:surname]=="") ? "<i>#{t('no_value').titleize}</i>".html_safe : @user[:surname] %></p>
+      <p><b><%= t('lastname').titleize %>:</b> <%= (@user[:lastname]=="") ? "<i>#{t('no_value').titleize}</i>".html_safe : @user[:lastname] %></p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="content left_line">
+      <h2><%= t('user_options_title').titleize %></h2>
+      <%= form_tag '/user/0', :method => 'post' do %>
+        <%= hidden_field_tag 'gid', session[:gid] %>
+        <%= submit_tag t("user_self_destroy").titleize %>
+      <% end %>
+    </div>
+  </div>
+</section>

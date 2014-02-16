@@ -1,0 +1,17 @@
+<section>
+  <div id="login">
+    <%= form_tag "", :method => "post" do %>
+      <div class="row">
+        <%= label_tag :login, "#{t('user')}: ".titleize %><br/>
+        <%= text_field_tag :login, "", :autocomplete => "off" %>
+      </div>
+      <div class="row">
+        <%= label_tag :password, "#{t('password')}: ".titleize %><br/>
+        <%= password_field_tag :password %>
+      </div>
+      <div class="row">
+        <%= submit_tag t('login_submit').titleize %>
+      </div>
+    <% end %>
+  </div>
+</section>
